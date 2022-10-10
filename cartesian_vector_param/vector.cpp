@@ -135,14 +135,14 @@ value Vector::operator[](size_t idx) const
 
 std::ostream &operator<<(std::ostream &os, const Vector &v)
 {
-    os << "[";
+    os << "{";
 
     for (int i = 0; i < NDIM - 1; i++)
     {
         os << v[i] << ',';
     }
 
-    os << v[NDIM - 1] << "]";
+    os << v[NDIM - 1] << "}";
 
     return os;
 }
