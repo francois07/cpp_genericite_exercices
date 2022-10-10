@@ -1,3 +1,3 @@
 #pragma once
 
-bool is_prime(int k);
+bool is_prime(long int k);

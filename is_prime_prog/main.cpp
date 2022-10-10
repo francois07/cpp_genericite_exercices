@@ -3,11 +3,21 @@
 
 int main()
 {
-    int i;
+    long int i;
 
     while (std::cin >> i)
     {
-        std::cout << i << " is a prime: " << std::boolalpha << is_prime(i) << std::endl;
+        bool res = is_prime(i);
+        std::cout << i << " is a prime: ";
+
+        if(res)
+        {
+            std::cout << "True";
+        } else {
+             std::cout << "False";
+        }
+
+        std::cout << std::endl;
     }
 
     return 0;
