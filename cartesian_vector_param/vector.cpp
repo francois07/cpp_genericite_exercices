@@ -33,7 +33,7 @@ Vector &Vector::operator+=(const Vector &v)
     return *this;
 }
 
-Vector Vector::operator+(const Vector &v)
+Vector Vector::operator+(const Vector &v) const
 {
     auto newVec = Vector{};
 
@@ -79,7 +79,7 @@ value Vector::operator*(const Vector &v)
     return dotProduct;
 }
 
-Vector &Vector::operator*=(const value &k)
+Vector &Vector::operator*=(value k)
 {
     for (int i = 0; i < NDIM; i++)
     {
@@ -89,7 +89,7 @@ Vector &Vector::operator*=(const value &k)
     return *this;
 }
 
-Vector Vector::operator*(const value &k)
+Vector Vector::operator*(value k)
 {
     auto newVec = Vector{};
 
@@ -101,7 +101,7 @@ Vector Vector::operator*(const value &k)
     return newVec;
 }
 
-Vector &Vector::operator+=(const value &k)
+Vector &Vector::operator+=(value k)
 {
     for (int i = 0; i < NDIM; i++)
     {
@@ -111,7 +111,7 @@ Vector &Vector::operator+=(const value &k)
     return *this;
 }
 
-Vector Vector::operator+(const value &k)
+Vector Vector::operator+(value k)
 {
     auto newVec = Vector{};
 
@@ -123,15 +123,15 @@ Vector Vector::operator+(const value &k)
     return newVec;
 }
 
-value &Vector::operator[](int idx)
+value &Vector::operator[](size_t idx)
 {
     return this->coords_[idx];
 }
 
-const value &Vector::operator[](int idx) const
+value Vector::operator[](size_t idx) const
 {
     return this->coords_[idx];
-};
+}
 
 std::ostream &operator<<(std::ostream &os, const Vector &v)
 {
