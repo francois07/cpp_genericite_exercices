@@ -25,13 +25,14 @@ int find_motive(std::string inFilePath, std::string motive)
     if (c == motive[charToFind])
     {
       charToFind += 1;
-    }
-    else
-    {
+    } else {
       charToFind = 0;
-      if (c == ' ')
+
+      if (c == ' ' || c == '\n')
       {
         motiveAppeared = false;
+      } else if(c == motive[charToFind]) {
+        charToFind += 1;
       }
     }
 

@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
   int motiveCount = find_motive(inFilePath, motive);
 
-  std::cout << "The file " << inFilePath << " contains " << motiveCount << " words containing the motive " << motive;
+  std::cout << "The file " << inFilePath << " contains " << motiveCount << " words containing the motive " << motive << std::endl;
 
   return 0;
 }
